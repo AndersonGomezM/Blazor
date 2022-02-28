@@ -1,6 +1,6 @@
 ﻿@page "/c_productos"
 
-<PageTitle>C_Productos</PageTitle>
+<PageTitle>Consulta</PageTitle>
 
 <EditForm Model="producto">
 
@@ -13,19 +13,8 @@
         @* Tabla con la base de datos *@
         @* <table class="table">
             <thead class="thead-light">
-                <tr>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Telefono</th>
-                </tr>
             </thead>
             <tbody>
-                @foreach (var item in producto)
-                {
-                    <tr>
-                        <td>@item.TipoId</td>
-                        <td>@item.Telefono</td>
-                    </tr>
-                }
 
             </tbody>
         </table> *@
@@ -35,7 +24,7 @@
 </EditForm>
 
 @code {
-    
+
     public Productos producto { get; set; } = new Productos();
 
 }

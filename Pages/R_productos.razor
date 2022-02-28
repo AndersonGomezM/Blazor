@@ -23,6 +23,8 @@
                 <label>Producto Id</label>
                 <InputNumber class="form-control" @bind-Value="producto.ProductoId" />
                 <ValidationMessage For="@(() => producto.ProductoId)" />
+
+                <button type="button" class="btn btn-lg btn-primary" @onclick="Buscar" > 🔎 Buscar </button>
             </div>
 
             @* Descricion *@
@@ -51,18 +53,19 @@
                 <InputNumber class="form-control" @bind-Value="producto.ValorInventario" />
             </div>
             
-            <div class="card-footer">
+        </div>
 
-                @* Botones *@
-                <div class="form-group text-center" display: inline-block>
-                    <button type="button" class="btn btn-lg btn-primary"> Nuevo </button>
-                    <button type="submit" class="btn btn-lg btn-success"> Guardar </button>
-                    <button type="button" class="btn btn-lg btn-danger" @onclick="Eliminar"> Eliminar </button>
-                </div>
-                
+        <div class="card-footer">
+
+            @* Botones *@
+            <div class="form-group text-center" display: inline-block>
+                <button type="button" class="btn btn-lg btn-primary" @onclick="Nuevo" > 📝 Nuevo </button>
+                <button type="submit" class="btn btn-lg btn-success" @onclick="Guardar" > 💾 Guardar </button>
+                <button type="button" class="btn btn-lg btn-danger" @onclick="Eliminar"> ❌ Eliminar </button>
             </div>
             
         </div>
+            
     </div>
 
 </EditForm>
