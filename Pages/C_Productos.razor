@@ -1,0 +1,41 @@
+﻿@page "/c_productos"
+
+<PageTitle>C_Productos</PageTitle>
+
+<EditForm Model="producto">
+
+    <div class="card">
+
+        <div class="card-header">
+            <h3>Consulta de Productos</h3>
+        </div>
+
+        @* Tabla con la base de datos *@
+        @* <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in producto)
+                {
+                    <tr>
+                        <td>@item.TipoId</td>
+                        <td>@item.Telefono</td>
+                    </tr>
+                }
+
+            </tbody>
+        </table> *@
+
+    </div>
+
+</EditForm>
+
+@code {
+    
+    public Productos producto { get; set; } = new Productos();
+
+}
